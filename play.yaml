@@ -1,0 +1,10 @@
+---
+- name: Instalare pachete
+  hosts: clients
+  become: yes
+
+  tasks:
+    - name: OpenJDK
+      ansible.builtin.apt:
+        name: default-jdk
+        state: present
